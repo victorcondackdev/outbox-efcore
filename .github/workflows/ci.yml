@@ -17,7 +17,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-dotnet@v4
         with:
@@ -69,7 +69,7 @@ jobs:
     env:
       OUTBOX_PG: Host=localhost;Port=5432;Username=outbox;Password=outbox;Database=outbox
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - uses: actions/setup-dotnet@v4
         with:
