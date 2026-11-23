@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <RootNamespace>Payments.Outbox.EntityFrameworkCore</RootNamespace>
+    <PackageId>Payments.Outbox.EntityFrameworkCore</PackageId>
+    <Version>0.1.0</Version>
+    <Description>Transactional outbox and inbox for EF Core applications: domain events written in the same transaction as the business change, a multi-instance-safe relay (optimistic claims on any relational provider, FOR UPDATE SKIP LOCKED on PostgreSQL), exponential backoff with jitter, dead-lettering, per-partition ordering, retention cleanup, idempotent consumers, metrics and W3C trace context propagation.</Description>
+    <PackageTags>outbox;transactional-outbox;inbox;efcore;entity-framework-core;postgresql;payments;messaging;at-least-once;idempotency</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageProjectUrl>https://github.com/victorcondackdev/outbox-efcore</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.11" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Abstractions" Version="8.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.2" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="Payments.Outbox.EntityFrameworkCore.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

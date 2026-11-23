@@ -1,0 +1,25 @@
+# Build output
+bin/
+obj/
+artifacts/
+coverage/
+TestResults/
+*.nupkg
+*.snupkg
+
+# IDEs
+.vs/
+.idea/
+.vscode/
+*.user
+*.suo
+*.DotSettings.user
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sample database
+*.db
+*.db-shm
+*.db-wal
